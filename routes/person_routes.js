@@ -44,7 +44,7 @@ routes.post('/login',async(req,res)=>{
         else{
             // res.send("login sucessfully")
             const token=jwt.sign({id:exist._id},key)
-            res.status(200).json({token,'personid':exist._id})
+            res.status(200).json({token,'personid':exist._id,'personName':exist.name})
             console.log("id",exist._id)
         }
         // const token=jwt.sign({id:exist._id},key)
